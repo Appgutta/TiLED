@@ -26,6 +26,13 @@
 		24DD6CFA1134B3F500162E58 /* TiLedModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD6CF81134B3F500162E58 /* TiLedModule.m */; };
 		24DE9E1111C5FE74003F90F6 /* TiLedModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DE9E0F11C5FE74003F90F6 /* TiLedModuleAssets.h */; };
 		24DE9E1211C5FE74003F90F6 /* TiLedModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* TiLedModuleAssets.m */; };
+		6A0C880B15DFB6D700E97C8A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A0C880A15DFB6D700E97C8A /* AVFoundation.framework */; };
+		6A0C882E15DFCEFE00E97C8A /* LEDController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A0C882C15DFCEFE00E97C8A /* LEDController.h */; };
+		6A0C882F15DFCEFE00E97C8A /* LEDController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A0C882D15DFCEFE00E97C8A /* LEDController.m */; };
+		6A0C885A15DFE71100E97C8A /* MorseController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A0C885815DFE71100E97C8A /* MorseController.h */; };
+		6A0C885B15DFE71100E97C8A /* MorseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A0C885915DFE71100E97C8A /* MorseController.m */; };
+		6A0C886215DFE7A100E97C8A /* MorseCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A0C886015DFE7A100E97C8A /* MorseCode.h */; };
+		6A0C886315DFE7A100E97C8A /* MorseCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A0C886115DFE7A100E97C8A /* MorseCode.m */; };
 		AA747D9F0F9514B9006C5449 /* TiLed_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* TiLed_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -36,19 +43,26 @@
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = "tiled";
+			remoteInfo = tiled;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		24DD6CF71134B3F500162E58 /* TiLedModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TiLedModule.h"; path = "Classes/TiLedModule.h"; sourceTree = "<group>"; };
-		24DD6CF81134B3F500162E58 /* TiLedModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "TiLedModule.m"; path = "Classes/TiLedModule.m"; sourceTree = "<group>"; };
+		24DD6CF71134B3F500162E58 /* TiLedModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiLedModule.h; path = Classes/TiLedModule.h; sourceTree = "<group>"; };
+		24DD6CF81134B3F500162E58 /* TiLedModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiLedModule.m; path = Classes/TiLedModule.m; sourceTree = "<group>"; };
 		24DD6D1B1134B66800162E58 /* titanium.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = titanium.xcconfig; sourceTree = "<group>"; };
-		24DE9E0F11C5FE74003F90F6 /* TiLedModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TiLedModuleAssets.h"; path = "Classes/TiLedModuleAssets.h"; sourceTree = "<group>"; };
-		24DE9E1011C5FE74003F90F6 /* TiLedModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "TiLedModuleAssets.m"; path = "Classes/TiLedModuleAssets.m"; sourceTree = "<group>"; };
-		AA747D9E0F9514B9006C5449 /* TiLed_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TiLed_Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		24DE9E0F11C5FE74003F90F6 /* TiLedModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiLedModuleAssets.h; path = Classes/TiLedModuleAssets.h; sourceTree = "<group>"; };
+		24DE9E1011C5FE74003F90F6 /* TiLedModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiLedModuleAssets.m; path = Classes/TiLedModuleAssets.m; sourceTree = "<group>"; };
+		6A0C880A15DFB6D700E97C8A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		6A0C882C15DFCEFE00E97C8A /* LEDController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LEDController.h; path = LED/LEDController.h; sourceTree = "<group>"; };
+		6A0C882D15DFCEFE00E97C8A /* LEDController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LEDController.m; path = LED/LEDController.m; sourceTree = "<group>"; };
+		6A0C885815DFE71100E97C8A /* MorseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MorseController.h; path = LED/MorseController.h; sourceTree = "<group>"; };
+		6A0C885915DFE71100E97C8A /* MorseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MorseController.m; path = LED/MorseController.m; sourceTree = "<group>"; };
+		6A0C886015DFE7A100E97C8A /* MorseCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MorseCode.h; path = LED/MorseCode.h; sourceTree = "<group>"; };
+		6A0C886115DFE7A100E97C8A /* MorseCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MorseCode.m; path = LED/MorseCode.m; sourceTree = "<group>"; };
+		AA747D9E0F9514B9006C5449 /* TiLed_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiLed_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D2AAC07E0554694100DB518D /* libTiLed.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libTiLed.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2AAC07E0554694100DB518D /* libTiLed.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTiLed.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A0C880B15DFB6D700E97C8A /* AVFoundation.framework in Frameworks */,
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,17 +89,19 @@
 		0867D691FE84028FC02AAC07 /* tiled */ = {
 			isa = PBXGroup;
 			children = (
+				6A0C882715DFCE8D00E97C8A /* LED */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
 			);
-			name = "tiled";
+			name = tiled;
 			sourceTree = "<group>";
 		};
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6A0C880A15DFB6D700E97C8A /* AVFoundation.framework */,
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -110,6 +127,19 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		6A0C882715DFCE8D00E97C8A /* LED */ = {
+			isa = PBXGroup;
+			children = (
+				6A0C886015DFE7A100E97C8A /* MorseCode.h */,
+				6A0C886115DFE7A100E97C8A /* MorseCode.m */,
+				6A0C882C15DFCEFE00E97C8A /* LEDController.h */,
+				6A0C882D15DFCEFE00E97C8A /* LEDController.m */,
+				6A0C885815DFE71100E97C8A /* MorseController.h */,
+				6A0C885915DFE71100E97C8A /* MorseController.m */,
+			);
+			name = LED;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -120,6 +150,9 @@
 				AA747D9F0F9514B9006C5449 /* TiLed_Prefix.pch in Headers */,
 				24DD6CF91134B3F500162E58 /* TiLedModule.h in Headers */,
 				24DE9E1111C5FE74003F90F6 /* TiLedModuleAssets.h in Headers */,
+				6A0C882E15DFCEFE00E97C8A /* LEDController.h in Headers */,
+				6A0C885A15DFE71100E97C8A /* MorseController.h in Headers */,
+				6A0C886215DFE7A100E97C8A /* MorseCode.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +171,8 @@
 			);
 			dependencies = (
 			);
-			name = "tiled";
-			productName = "tiled";
+			name = tiled;
+			productName = tiled;
 			productReference = D2AAC07E0554694100DB518D /* libTiLed.a */;
 			productType = "com.apple.product-type.library.static";
 		};
@@ -192,6 +225,9 @@
 			files = (
 				24DD6CFA1134B3F500162E58 /* TiLedModule.m in Sources */,
 				24DE9E1211C5FE74003F90F6 /* TiLedModuleAssets.m in Sources */,
+				6A0C882F15DFCEFE00E97C8A /* LEDController.m in Sources */,
+				6A0C885B15DFE71100E97C8A /* MorseController.m in Sources */,
+				6A0C886315DFE7A100E97C8A /* MorseCode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,11 +257,11 @@
 				"ARCHS[sdk=iphonesimulator*]" = i386;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DSTROOT = "/tmp/TiLed.dst";
+				DSTROOT = /tmp/TiLed.dst;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TiLed_Prefix.pch";
+				GCC_PREFIX_HEADER = TiLed_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = "";
@@ -244,7 +280,7 @@
 					"-DTI_POST_1_2",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "TiLed";
+				PRODUCT_NAME = TiLed;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				RUN_CLANG_STATIC_ANALYZER = NO;
@@ -267,11 +303,11 @@
 					armv7,
 				);
 				"ARCHS[sdk=iphonesimulator*]" = i386;
-				DSTROOT = "/tmp/TiLed.dst";
+				DSTROOT = /tmp/TiLed.dst;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TiLed_Prefix.pch";
+				GCC_PREFIX_HEADER = TiLed_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = "";
@@ -288,7 +324,7 @@
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "-DTI_POST_1_2";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "TiLed";
+				PRODUCT_NAME = TiLed;
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -310,11 +346,11 @@
 				"ARCHS[sdk=iphonesimulator*]" = i386;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DSTROOT = "/tmp/TiLed.dst";
+				DSTROOT = /tmp/TiLed.dst;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TiLed_Prefix.pch";
+				GCC_PREFIX_HEADER = TiLed_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = "";
@@ -327,12 +363,13 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = (
 					"-DDEBUG",
 					"-DTI_POST_1_2",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "TiLed";
+				PRODUCT_NAME = TiLed;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				RUN_CLANG_STATIC_ANALYZER = NO;
@@ -355,11 +392,11 @@
 					armv7,
 				);
 				"ARCHS[sdk=iphonesimulator*]" = i386;
-				DSTROOT = "/tmp/TiLed.dst";
+				DSTROOT = /tmp/TiLed.dst;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TiLed_Prefix.pch";
+				GCC_PREFIX_HEADER = TiLed_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = "";
@@ -375,7 +412,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DTI_POST_1_2";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "TiLed";
+				PRODUCT_NAME = TiLed;
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "";

@@ -11,6 +11,10 @@
 
 @implementation TiLedModule
 
+@synthesize LEDTimer, LEDFlashTimer;
+@synthesize LEDActivated;
+@synthesize led, morseblink;
+
 #pragma mark Internal
 
 // this is generated for your module, please do not change it
@@ -29,8 +33,17 @@
 
 -(void)startup
 {
-	// this method is called when the module is first loaded
-	// you *must* call the superclass
+	LEDIsOn = NO;
+	LEDActivated = NO;
+	LEDFlashOn = NO;
+	
+	led = [[LEDController alloc] init];
+    morseblink = [[MorseController alloc] init];
+    
+    /*self.LEDTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(LEDTimerCallback:) userInfo:nil repeats:YES];
+	self.LEDFlashTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(LEDFlashTimerCallback:) userInfo:nil repeats:YES];*/
+
+    
 	[super startup];
 	
 	NSLog(@"[INFO] %@ loaded",self);
@@ -50,7 +63,8 @@
 
 -(void)dealloc
 {
-	// release any resources that have been retained by the module
+	[led release];
+    [morseblink release];
 	[super dealloc];
 }
 
@@ -86,21 +100,25 @@
 
 #pragma Public APIs
 
--(id)example:(id)args
+-(void)toggle:(id)args
 {
-	// example method
-	return @"hello world";
+	if (!LEDIsOn) {
+		[led toggle:YES];
+        LEDIsOn = YES;
+	} else {
+		[led toggle:NO];
+        LEDIsOn = NO;
+	}
 }
 
--(id)exampleProp
+-(void)morse:(id)txt
 {
-	// example property getter
-	return @"hello world";
+	ENSURE_SINGLE_ARG(txt, NSString)
+    [morseblink blink:txt];
 }
 
--(void)setExampleProp:(id)value
-{
-	// example property setter
+-(id)example:(id)args {
+    NSLog(@"Example");
 }
 
 @end

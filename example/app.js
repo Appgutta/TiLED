@@ -6,34 +6,22 @@
 
 // open a single window
 var win = Ti.UI.createWindow({
-	backgroundColor:'white'
+    backgroundColor:'white'
 });
-var label = Ti.UI.createLabel();
-win.add(label);
+var button = Ti.UI.createButton({
+    title: "Toggle LED"
+});
+win.add(button);
 win.open();
 
 // TODO: write your module tests here
 var tiled = require('ti.led');
 Ti.API.info("module is => " + tiled);
+var on = true;
 
-label.text = tiled.example();
-
-Ti.API.info("module exampleProp is => " + tiled.exampleProp);
-tiled.exampleProp = "This is a test value";
-
-if (Ti.Platform.name == "android") {
-	var proxy = tiled.createExample({
-		message: "Creating an example Proxy",
-		backgroundColor: "red",
-		width: 100,
-		height: 100,
-		top: 100,
-		left: 150
-	});
-
-	proxy.printMessage("Hello world!");
-	proxy.message = "Hi world!.  It's me again.";
-	proxy.printMessage("Hello world!");
-	win.add(proxy);
-}
-
+button.addEventListener("click", function() {
+    Ti.API.info(on);
+    /*tiled.toggle(on);
+    on = !on;*/
+    tiled.morse("SOS");
+});
