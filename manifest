@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 0.1
+apiversion: 2
+description: My module
+author: Your Name
+license: Specify your license
+copyright: Copyright (c) 2012 by Your Company
+
+
+# these should not be edited
+name: tiled
+moduleid: ti.led
+guid: 3a3fd5d6-ac61-4b1c-b792-12a6b7eb6fd8
+platform: iphone
+minsdk: 2.1.1.GA
