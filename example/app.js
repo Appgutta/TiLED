@@ -1,27 +1,30 @@
-// This is a test harness for your module
-// You should do something interesting in this harness 
-// to test out the module and to provide instructions 
-// to users on how to use it by example.
-
-
 // open a single window
 var win = Ti.UI.createWindow({
-    backgroundColor:'white'
+    backgroundColor:'white',
+    layout: "vertical"
 });
-var button = Ti.UI.createButton({
-    title: "Toggle LED"
+
+var toggle = Ti.UI.createButton({
+    title: "Toggle LED",
+    top: 200
 });
-win.add(button);
+
+var morse = Ti.UI.createButton({
+    title: "Morse SOS",
+    top: 20
+});
+
+win.add(toggle, morse);
 win.open();
 
-// TODO: write your module tests here
 var tiled = require('ti.led');
-Ti.API.info("module is => " + tiled);
 var on = true;
 
-button.addEventListener("click", function() {
-    Ti.API.info(on);
-    /*tiled.toggle(on);
-    on = !on;*/
+toggle.addEventListener("click", function() {
+    tiled.toggle(on);
+    on = !on;
+});
+
+morse.addEventListener("click", function() {
     tiled.morse("SOS");
 });
