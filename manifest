@@ -4,10 +4,10 @@
 #
 version: 0.1
 apiversion: 2
-description: My module
-author: Your Name
-license: Specify your license
-copyright: Copyright (c) 2012 by Your Company
+description: TiLED
+author: Chris Magnussen
+license: Apache 2.0
+copyright: Copyright (c) 2011 by Appgutta, DA
 
 
 # these should not be edited
