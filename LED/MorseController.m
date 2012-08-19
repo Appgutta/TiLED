@@ -2,8 +2,8 @@
 //  MorseController.m
 //  tiled
 //
-//  Created by Theta Design on 18.08.12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created by Chris Magnussen on 18.08.12.
+//  Copyright (c) 2012 Appgutta, DA. All rights reserved.
 //
 
 #import "MorseController.h"

@@ -1,9 +1,11 @@
-/**
- * Your Copyright Here
- *
- * Appcelerator Titanium is Copyright (c) 2009-2010 by Appcelerator, Inc.
- * and licensed under the Apache Public License (version 2)
- */
+//
+//  TiLedModule.h
+//  tiled
+//
+//  Created by Chris Magnussen on 18.08.12.
+//  Copyright (c) 2012 Appgutta, DA. All rights reserved.
+//
+
 #import "TiModule.h"
 #import "LEDController.h"
 #import "MorseController.h"
