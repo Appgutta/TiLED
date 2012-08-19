@@ -37,6 +37,9 @@ Chris Magnussen for Appgutta, DA.
 
  * [Twitter][]
  * [Appgutta.no][]
+ 
+## Credits
+* MorseCode.h/.m - Sergio Botero [MorseBlinker][]
 
 License
 ------
@@ -45,3 +48,4 @@ Copyright (c) 2012 by Appgutta, DA. All Rights Reserved. Please see the LICENSE 
 
 [Twitter]: http://twitter.com/crmag
 [Appgutta.no]: http://www.appgutta.no
+[MorseBlinker]: http://github.com/sergiobuj/iOS-Sample-Code/tree/master/MorseBlinker
