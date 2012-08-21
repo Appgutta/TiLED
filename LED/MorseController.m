@@ -45,7 +45,6 @@
 	[NSThread sleepForTimeInterval:TIME_UNIT*PAUSE_LETTER ];
 	dot_or_dash *= -1;
 	for (int letter=0; (letter<text_len) && running_blink; ++letter) {
-        NSLog(@"Blink 3");
 		NSString * current_letter= [NSString stringWithFormat:@"%c",[morseText characterAtIndex:letter]];
 		NSString * letter_form = [morse_codes objectForKey:current_letter];
 		letter_form_ln = [letter_form length];
@@ -53,14 +52,12 @@
 			[self performSelectorOnMainThread:@selector(inter_view_change:) withObject:[NSNumber numberWithInt:dot_or_dash] waitUntilDone:YES];
 			[NSThread sleepForTimeInterval:TIME_UNIT*([letter_form characterAtIndex:letter_index] - 48)];
 			dot_or_dash *= -1;
-            NSLog(@"Blink 4");
 			
 		}
 		[self performSelectorOnMainThread:@selector(inter_view_change:) withObject:[NSNumber numberWithInt:dot_or_dash] waitUntilDone:YES];
 		[NSThread sleepForTimeInterval:TIME_UNIT*PAUSE_LETTER ];
 		dot_or_dash *= -1;
 	}
-    NSLog(@"Blink 5");
 	[thread_pool release];
 }
 
