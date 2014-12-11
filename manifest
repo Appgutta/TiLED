@@ -3,6 +3,7 @@
 # during compilation, packaging, distribution, etc.
 #
 version: 0.1
+architectures: armv7 i386 x86_64 arm64
 apiversion: 2
 description: TiLED
 author: Chris Magnussen
