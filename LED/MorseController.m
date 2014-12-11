@@ -38,7 +38,7 @@
 	NSAutoreleasePool * thread_pool = [[NSAutoreleasePool alloc] init];
 	NSDictionary *morse_codes=[NSDictionary dictionaryWithDictionary:[MorseCode create_morse_dictionary]];
 	running_blink = YES;
-    int letter_form_ln;
+    NSInteger letter_form_ln;
     int dot_or_dash=-1;
     NSInteger text_len = [morseText length];
 	[self performSelectorOnMainThread:@selector(inter_view_change:) withObject:[NSNumber numberWithInt:dot_or_dash] waitUntilDone:YES];
